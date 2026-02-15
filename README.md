@@ -47,5 +47,6 @@ kubectl get svc
 
 - Access API Gateway via External IP:
 
-http://<EXTERNAL-IP>/users
-http://<EXTERNAL-IP>/products
+http://<<EXTERNAL-IP>>/users
+
+http://<<EXTERNAL-IP></EXTERNAL-IP>/products
