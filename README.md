@@ -33,7 +33,26 @@ microservices-app/
 |
 └── README.md
 
+## 📂 Project Structure
 
+microservices-app/
+├── api-gateway/
+│   ├── Dockerfile
+│   ├── package.json
+│   └── index.js
+├── user-service/
+│   ├── Dockerfile
+│   ├── package.json
+│   └── index.js
+├── product-service/
+│   ├── Dockerfile
+│   ├── package.json
+│   └── index.js
+├── k8s/
+│   ├── user-deployment.yaml
+│   ├── product-deployment.yaml
+│   └── gateway-deployment.yaml
+└── README.md
 ---
 
 ## 📝 Steps Overview
