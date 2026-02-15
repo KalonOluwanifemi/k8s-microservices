@@ -6,7 +6,7 @@
 
 This project demonstrates how to deploy a **microservices application** to **Azure Kubernetes Service (AKS)** using **Docker** and **Kubernetes**, following cloud-native and DevOps best practices.
 
----
+
 microservices-app/
 |-- api-gateway/
 |   |-- Dockerfile
@@ -26,7 +26,7 @@ microservices-app/
 |   |-- gateway-deployment.yaml
 |-- README.md
 
----
+
 
 ## 📝 Steps Overview
 
