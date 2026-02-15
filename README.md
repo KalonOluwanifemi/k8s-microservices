@@ -51,8 +51,17 @@ http://EXTERNAL-IP/users
 
 http://EXTERNAL-IP/products
 
-Kubectl get pods
+Kubectl get svc
+
+<img width="895" height="160" alt="image" src="https://github.com/user-attachments/assets/391080f1-2e98-4248-87bb-28847aa55ea2" />
 
 
+kubectl get pods
 
+<img width="736" height="155" alt="image" src="https://github.com/user-attachments/assets/b91dc9aa-14ad-46d6-8e62-34a594d9070b" />
+
+
+http://52.159.224.99/products
+
+<img width="1190" height="724" alt="image" src="https://github.com/user-attachments/assets/3205d68e-ec5e-44c7-bf31-fc713df5b071" />
 
