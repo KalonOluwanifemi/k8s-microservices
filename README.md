@@ -7,52 +7,25 @@
 This project demonstrates how to deploy a **microservices application** to **Azure Kubernetes Service (AKS)** using **Docker** and **Kubernetes**, following cloud-native and DevOps best practices.
 
 ---
-
-## 📂 Project Structure
 microservices-app/
-|
-├── api-gateway/
-| ├── Dockerfile
-| ├── package.json
-| └── index.js
-|
-├── user-service/
-| ├── Dockerfile
-| ├── package.json
-| └── index.js
-|
-├── product-service/
-| ├── Dockerfile
-| ├── package.json
-| └── index.js
-|
-├── k8s/
-| ├── user-deployment.yaml
-| ├── product-deployment.yaml
-| └── gateway-deployment.yaml
-|
-└── README.md
+|-- api-gateway/
+|   |-- Dockerfile
+|   |-- package.json
+|   |-- index.js
+|-- user-service/
+|   |-- Dockerfile
+|   |-- package.json
+|   |-- index.js
+|-- product-service/
+|   |-- Dockerfile
+|   |-- package.json
+|   |-- index.js
+|-- k8s/
+|   |-- user-deployment.yaml
+|   |-- product-deployment.yaml
+|   |-- gateway-deployment.yaml
+|-- README.md
 
-## 📂 Project Structure
-
-microservices-app/
-├── api-gateway/
-│   ├── Dockerfile
-│   ├── package.json
-│   └── index.js
-├── user-service/
-│   ├── Dockerfile
-│   ├── package.json
-│   └── index.js
-├── product-service/
-│   ├── Dockerfile
-│   ├── package.json
-│   └── index.js
-├── k8s/
-│   ├── user-deployment.yaml
-│   ├── product-deployment.yaml
-│   └── gateway-deployment.yaml
-└── README.md
 ---
 
 ## 📝 Steps Overview
