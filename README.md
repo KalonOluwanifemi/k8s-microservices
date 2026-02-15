@@ -5,26 +5,8 @@
 [![Node.js](https://img.shields.io/badge/Node.js-18-green?logo=node.js)](https://nodejs.org/)
 
 This project demonstrates how to deploy a **microservices application** to **Azure Kubernetes Service (AKS)** using **Docker** and **Kubernetes**, following cloud-native and DevOps best practices.
-
-
-microservices-app/
-|-- api-gateway/
-|   |-- Dockerfile
-|   |-- package.json
-|   |-- index.js
-|-- user-service/
-|   |-- Dockerfile
-|   |-- package.json
-|   |-- index.js
-|-- product-service/
-|   |-- Dockerfile
-|   |-- package.json
-|   |-- index.js
-|-- k8s/
-|   |-- user-deployment.yaml
-|   |-- product-deployment.yaml
-|   |-- gateway-deployment.yaml
-|-- README.md
+## Project structure
+<img width="794" height="514" alt="image" src="https://github.com/user-attachments/assets/496021f0-83af-4dd4-a823-b2d8a44d24be" />
 
 
 
