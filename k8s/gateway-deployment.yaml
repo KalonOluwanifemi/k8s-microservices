@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api-gateway
-          image: <dockerhub-username>/api-gateway:1.0
+          image: kalonoladayo/api-gateway:1.0
           ports:
             - containerPort: 3000
 ---
