@@ -67,7 +67,7 @@ http://52.159.224.99/products
 
 
 
-GitOps with ArgoCD
+## GitOps with ArgoCD
 
 <img width="1911" height="856" alt="image" src="https://github.com/user-attachments/assets/492b9996-96d4-4c30-ba52-bbf6355907b5" />
 
