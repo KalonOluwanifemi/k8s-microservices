@@ -65,3 +65,8 @@ http://52.159.224.99/products
 
 <img width="1190" height="724" alt="image" src="https://github.com/user-attachments/assets/3205d68e-ec5e-44c7-bf31-fc713df5b071" />
 
+GitOps with ArgoCD
+
+<img width="1911" height="856" alt="image" src="https://github.com/user-attachments/assets/492b9996-96d4-4c30-ba52-bbf6355907b5" />
+
+
