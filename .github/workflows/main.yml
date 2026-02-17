@@ -1,0 +1,79 @@
+name: Build and Push Microservices Images
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  IMAGE_TAG: ${{ github.sha }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build user-service image
+        run: docker build -t user-service:${{ env.IMAGE_TAG }} ./user-service
+
+      - name: Build product-service image
+        run: docker build -t product-service:${{ env.IMAGE_TAG }} ./product-service
+
+      - name: Build api-gateway image
+        run: docker build -t api-gateway:${{ env.IMAGE_TAG }} ./api-gateway
+
+      - name: Save Docker images as artifacts
+        run: |
+          docker save user-service:${{ env.IMAGE_TAG }} > user-service.tar
+          docker save product-service:${{ env.IMAGE_TAG }} > product-service.tar
+          docker save api-gateway:${{ env.IMAGE_TAG }} > api-gateway.tar
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: docker-images
+          path: |
+            user-service.tar
+            product-service.tar
+            api-gateway.tar
+
+
+  push:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: docker-images
+
+      - name: Load Docker images
+        run: |
+          docker load < user-service.tar
+          docker load < product-service.tar
+          docker load < api-gateway.tar
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Tag & push user-service
+        run: |
+          docker tag user-service:${{ env.IMAGE_TAG }} ${{ secrets.DOCKERHUB_USERNAME }}/user-service:${{ env.IMAGE_TAG }}
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/user-service:${{ env.IMAGE_TAG }}
+
+      - name: Tag & push product-service
+        run: |
+          docker tag product-service:${{ env.IMAGE_TAG }} ${{ secrets.DOCKERHUB_USERNAME }}/product-service:${{ env.IMAGE_TAG }}
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/product-service:${{ env.IMAGE_TAG }}
+
+      - name: Tag & push api-gateway
+        run: |
+          docker tag api-gateway:${{ env.IMAGE_TAG }} ${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:${{ env.IMAGE_TAG }}
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:${{ env.IMAGE_TAG }}
