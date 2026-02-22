@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api-gateway
-          image: kalonoladayo/api-gateway:1.0
+          image: kalonoladayo/api-gateway:29c4c074fef31b1a88073e8d848f2ab79d8219a1
           ports:
             - containerPort: 3000
 ---
