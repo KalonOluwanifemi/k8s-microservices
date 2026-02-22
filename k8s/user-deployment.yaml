@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: user-service
-          image: kalonoladayo/user-service:29c4c074fef31b1a88073e8d848f2ab79d8219a1
+          image: kalonoladayo/user-service:7c8643fb8eaff67aead9b42f29a3c1a1dbc65d74
           ports:
             - containerPort: 3001
 ---
