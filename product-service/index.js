@@ -8,7 +8,7 @@ app.get('/products', (req, res) => {
     { id: 1, name: 'Laptop' },
     { id: 2, name: 'Phone' },
     { id: 3, name: 'Motorcycle' },
-    { id: 4, name: 'rugs'}
+    { id: 4, name: 'shirts'}
   ]);
 });
 
