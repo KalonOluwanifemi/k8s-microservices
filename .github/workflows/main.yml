@@ -80,11 +80,11 @@ jobs:
       - name: Update deployment YAML with new image tags
         run: |
           # User Service
-          sed -i "s#image: .*user-service:.*#image: ${{ secrets.DOCKERHUB_USERNAME }}/user-service:${{ env.IMAGE_TAG }}#" k8s/user-deployment.yaml
+          sed -i "s#image: .*user-service:.*#image: ${{ secrets.DOCKERHUB_USERNAME }}/user-service:${{ env.IMAGE_TAG }}#" k8s-microservices/k8s/user-deployment.yaml
           # Product Service
-          sed -i "s#image: .*product-service:.*#image: ${{ secrets.DOCKERHUB_USERNAME }}/product-service:${{ env.IMAGE_TAG }}#" k8s/product-deployment.yaml
+          sed -i "s#image: .*product-service:.*#image: ${{ secrets.DOCKERHUB_USERNAME }}/product-service:${{ env.IMAGE_TAG }}#" k8s-microservices/8s/product-deployment.yaml
           # API Gateway
-          sed -i "s#image: .*api-gateway:.*#image: ${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:${{ env.IMAGE_TAG }}#" k8s/gateway-deployment.yaml
+          sed -i "s#image: .*api-gateway:.*#image: ${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:${{ env.IMAGE_TAG }}#" k8s-microservices-k8s/gateway-deployment.yaml
 
       - name: Commit updated deployment YAML
         run: |
