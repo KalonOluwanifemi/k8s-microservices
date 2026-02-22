@@ -77,6 +77,13 @@ jobs:
           docker tag api-gateway:${{ env.IMAGE_TAG }} ${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:${{ env.IMAGE_TAG }}
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:${{ env.IMAGE_TAG }}
 
+      - name: Show files
+        run: |
+          pwd
+          ls
+          ls k8s-microservices
+          ls k8s-microservices/k8s
+          
       - name: Update deployment YAML with new image tags
         run: |
           # User Service
