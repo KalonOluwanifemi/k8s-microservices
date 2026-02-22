@@ -81,8 +81,7 @@ jobs:
         run: |
           pwd
           ls
-          ls k8s-microservices
-          ls k8s-microservices/k8s
+          ls k8s
           
       - name: Update deployment YAML with new image tags
         run: |
